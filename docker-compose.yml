@@ -1,0 +1,10 @@
+# Deploy on Jambotron: pick this file in the deploy wizard, give the "web" service a domain, port 80.
+name: aria-markdown-editor-demo
+
+services:
+  web:
+    build: .
+    restart: unless-stopped
+    expose:
+      - "80"
+    mem_limit: 64m

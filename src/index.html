@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>@jambotron/aria-markdown-editor — demo</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Live examples of @jambotron/aria-markdown-editor: a Markdown editor for Angular on Angular Aria — toolbar, live preview, formulas, images, forms.">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Roboto:wght@400;500&family=JetBrains+Mono&display=swap" rel="stylesheet">
+  <!-- theme before Angular starts (JtThemeService keeps the choice under 'jt-theme'): no flash of the wrong colors -->
+  <script>
+    try {
+      var t = localStorage.getItem('jt-theme');
+      if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t;
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <app-root></app-root>
+</body>
+</html>

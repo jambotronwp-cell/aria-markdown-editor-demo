@@ -1,0 +1,52 @@
+@use '@jambotron/aria-components/styles/aria-components';
+@use 'katex/dist/katex.min.css';
+
+html { min-height: 100%; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--jt-font-body);
+  color: var(--jt-text);
+  background:
+    radial-gradient(1200px 600px at 10% -10%, color-mix(in srgb, var(--jt-accent) 18%, transparent), transparent 60%),
+    radial-gradient(900px 500px at 110% 10%, color-mix(in srgb, var(--jt-accent-3) 16%, transparent), transparent 60%),
+    var(--jt-surface-low);
+  background-attachment: fixed;
+}
+
+.top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--jt-space-4);
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: var(--jt-space-5) var(--jt-space-4) var(--jt-space-3);
+}
+
+.brand { display: flex; align-items: center; gap: var(--jt-space-3); }
+.brand h1 { margin: 0; font-family: var(--jt-font-display); font-size: clamp(1.1rem, 3vw, 1.6rem); letter-spacing: 0.02em; }
+.brand p { margin: 2px 0 0; color: var(--jt-text-muted); }
+.brand-mark { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 12px;
+  background: var(--jt-accent); color: var(--jt-on-accent); box-shadow: var(--jt-glow-accent); }
+.switches { display: flex; flex-wrap: wrap; align-items: center; gap: var(--jt-space-2); }
+
+main { display: flex; flex-direction: column; gap: var(--jt-space-4); max-width: 1160px; margin: 0 auto; padding: var(--jt-space-2) var(--jt-space-4) var(--jt-space-6); }
+
+.jt-panel h2 { display: flex; align-items: center; gap: var(--jt-space-2); margin: 0 0 var(--jt-space-2); font-size: var(--jt-fs-xl); }
+.jt-panel h2 > span { display: grid; place-items: center; width: 28px; height: 28px; border-radius: 50%; flex: none;
+  background: color-mix(in srgb, var(--jt-accent) 20%, transparent); color: var(--jt-accent-text); font-size: var(--jt-fs-md); }
+.lead { margin: 0 0 var(--jt-space-4); color: var(--jt-text-muted); line-height: 1.55; max-width: 80ch; }
+
+code, pre { font-family: var(--jt-font-mono); }
+:not(pre) > code { padding: 0.1em 0.35em; border-radius: var(--jt-radius-sm); background: color-mix(in srgb, var(--jt-text) 8%, transparent); font-size: 0.9em; }
+pre.snippet { margin: var(--jt-space-3) 0 0; padding: var(--jt-space-3); border-radius: var(--jt-radius-md); overflow-x: auto;
+  background: color-mix(in srgb, var(--jt-surface-lowest) 70%, transparent); border: 1px solid var(--jt-divider); font-size: var(--jt-fs-sm); line-height: 1.5; }
+
+.row { display: flex; flex-wrap: wrap; align-items: center; gap: var(--jt-space-2); }
+
+.foot { max-width: 1160px; margin: 0 auto; padding: var(--jt-space-4) var(--jt-space-4) var(--jt-space-6); color: var(--jt-text-muted); text-align: center; }
+.foot a, .lead a { color: var(--jt-accent-text); }
+

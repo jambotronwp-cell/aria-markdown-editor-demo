@@ -1,0 +1,49 @@
+<header class="top">
+  <div class="brand">
+    <span class="brand-mark" aria-hidden="true">M↓</span>
+    <div>
+      <h1>&#64;jambotron/aria-markdown-editor</h1>
+      <p>Markdown editor for Angular on Angular Aria — live examples</p>
+    </div>
+  </div>
+  <div class="switches">
+    <jt-theme-toggle [compact]="true" />
+  </div>
+</header>
+
+<main>
+  <section class="jt-panel" aria-labelledby="ex1">
+    <h2 id="ex1"><span>1</span> The editor</h2>
+    <p class="lead">
+      Source on the left, result on the right. Toolbar: one Tab stop, arrows inside. Keys: <code>Ctrl/⌘ + B</code> bold,
+      <code>I</code> italic, <code>K</code> link, <code>E</code> code; <code>Enter</code> continues a list, twice — ends it;
+      <code>Ctrl+Z</code> undoes toolbar edits too. Formulas use KaTeX, loaded only when the first formula appears.
+      Paste or drop an image.
+    </p>
+    <demo-full-example />
+  </section>
+
+  <section class="jt-panel" aria-labelledby="ex2">
+    <h2 id="ex2"><span>2</span> In forms</h2>
+    <p class="lead">
+      The editor is a form control: <code>[(value)]</code>, Signal Forms <code>[formField]</code>, <code>formControl</code>, <code>ngModel</code>.
+      Validation, touched and disabled work as with any input. <code>layout="tabs"</code> forces Write / Preview tabs.
+    </p>
+    <demo-forms-example />
+  </section>
+
+  <section class="jt-panel" aria-labelledby="ex3">
+    <h2 id="ex3"><span>3</span> Phone width and read-only pages</h2>
+    <p class="lead">
+      Narrower than 720px the editor switches to tabs by itself. Your own toolbar — <code>[tools]</code>.
+      <code>&lt;jt-md-preview&gt;</code> renders the same Markdown on pages that only show it (SSR-safe, sanitized).
+    </p>
+    <demo-preview-example />
+  </section>
+</main>
+
+<footer class="foot">
+  Deployed on <a href="https://jambotron.com" target="_blank" rel="noopener">jambotron.com</a> ·
+  icons and theme — <a href="https://aria-components-demo.jambocheck.com" target="_blank" rel="noopener">&#64;jambotron/aria-components</a> ·
+  source <a href="https://gitea.jambotron.com/jambotron_gang/aria-markdown-editor-demo" target="_blank" rel="noopener">aria-markdown-editor-demo</a>
+</footer>
